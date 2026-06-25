@@ -1,26 +1,43 @@
 /* inter-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Inter';
+  font-family: 'Inter-400';
   font-style: normal;
   font-weight: 400;
-  src: url('../assets/fontsinter-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../assets/fonts/inter-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* inter-600 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Inter';
+  font-family: 'Inter-600';
   font-style: normal;
   font-weight: 600;
-  src: url('../assets/fontsinter-v20-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../assets/fonts/inter-v20-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* inter-700 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Inter';
+  font-family: 'Inter-700';
   font-style: normal;
   font-weight: 700;
-  src: url('../assets/fontsinter-v20-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../assets/fonts/inter-v20-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root { 
+    /* color */
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --soft-white: #d1d1d1;
+    --Grey-700: hsl(0, 0%, 20%);
+    --Grey-800: hsl(0, 0%, 12%);
+    --Grey-900: hsl(0, 0%, 8%);
+
+    --footer-blue: hsl(228, 45%, 44%);
+
+    /* fonts */
+    --inter-400: 'Inter-400';
+    --inter-600: 'Inter-600';
+    --inter-700: 'Inter-700';
 }
 
 * {
@@ -35,26 +52,14 @@ body {
     font-family: 'myCustomFont', sans-serif;
 }
 
-
-:root { 
-    --green: hsl(75, 94%, 57%);
-    --white: hsl(0, 0%, 100%);
-    --soft-white: #d1d1d1;
-    --Grey-700: hsl(0, 0%, 20%);
-    --Grey-800: hsl(0, 0%, 12%);
-    --Grey-900: hsl(0, 0%, 8%);
-
-    --footer-blue: hsl(228, 45%, 44%);
-}
-
-.container {
+main {
     width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--Grey-900);
-    padding: 20px;
+    padding: 1.5rem;
 }
 
 
@@ -62,16 +67,13 @@ body {
     width: 100%;
     background-color: var(--Grey-800);
     padding: 35px;
-    max-width: 350px;
-    min-width: 300px;
-    max-height: 700px;
-    min-height: 500px;
+    width: clamp(300px, 40%, 350px);
     display: flex;
     flex-direction: column;
-    gap: 31px;
+    gap: 1rem;
     align-items: center;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 1rem;
 }
 
 .container img {
@@ -88,20 +90,20 @@ body {
 
 .name {
     color: var(--white);
+    font-family: var(--inter-700);
     font-size: 1.5rem;
-    font-weight: 700;
 }
 
 .location {
     color: var(--green);
     font-size: 0.9rem;
-    font-weight: 600;
+    font-family: var(--inter-600);
 }
 
 .position {
     color: var(--soft-white);
     font-size: 0.9rem;
-    font-weight: 400;
+    font-family: var(--inter-400);
 }
 
 .nav {
@@ -116,7 +118,7 @@ body {
     padding: 15px 0;
     border-radius: 5px;
     font-size: 0.9rem;
-    font-weight: 600;
+    font-family: var(--inter-600);
 }
 
 .nav a:hover {
