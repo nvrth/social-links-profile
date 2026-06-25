@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'myCustomFont';
+    src: url('../assets/fonts/Inter-VariableFont_slnt\,wght.ttf');
+}
+
+body {
+    font-family: 'myCustomFont', sans-serif;
+}
+
+
+:root { 
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --soft-white: #d1d1d1;
+    --Grey-700: hsl(0, 0%, 20%);
+    --Grey-800: hsl(0, 0%, 12%);
+    --Grey-900: hsl(0, 0%, 8%);
+
+
+    --footer-blue: hsl(228, 45%, 44%);
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Grey-900);
+    padding: 20px;
+}
+
+
+.card {
+    width: 100%;
+    background-color: var(--Grey-800);
+    padding: 35px;
+    max-width: 350px;
+    min-width: 300px;
+    max-height: 700px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.container img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.name {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.location {
+    color: var(--green);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.position {
+    color: var(--soft-white);
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.nav {
+    width: 100%;
+}
+
+.nav a {
+    display: block;
+    width: 100%;
+    color: var(--white);
+    background-color: var(--Grey-700);
+    padding: 15px 0;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.nav a:hover {
+    background-color: var(--green);
+    color: var(--Grey-900)
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
