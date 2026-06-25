@@ -65,7 +65,7 @@ main {
 
 .card {
     background-color: var(--Grey-800);
-    padding: 2rem;
+    padding: clamp(2rem, 4vw, 3rem);
     width: clamp(300px, 40%, 400px);
     display: flex;
     flex-direction: column;
